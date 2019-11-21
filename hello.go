@@ -22,9 +22,8 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		m := map[string]string{"tconst": record[0]}
+		m := map[string]string{"tconst": record[0], "titleType": record[1], "primaryTitle": record[2], "originalTitle": record[3], "isAdult": record[4], "startYear": record[5], "endYear": record[6], "runtimeMinutes": record[7], "genres": record[8]}
 		enc := json.NewEncoder(log.Writer())
 		enc.Encode(m)
 	}
-
 }
